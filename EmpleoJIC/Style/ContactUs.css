@@ -1,0 +1,108 @@
+﻿.principal .derecha {
+    width: 50%;
+    display: block;
+    float: left;
+    padding-top: 1%;
+    padding-left: 5%;
+}
+
+    .principal .derecha img {
+        width: 100%;
+    }
+
+.principal .izquierda {
+    width: 50%;
+    display: block;
+    float: right;
+    text-align: justify;
+    padding: 1% 5%;
+}
+
+    .principal .izquierda form {
+        height: 450px;
+        width: 100%;
+        border: 2px solid rgb(0,0,0);
+        color: black;
+        padding: 3%;
+    }
+
+form h2 {
+    text-align: center;
+}
+
+form label {
+    font-size: 18px;
+    margin: 0% 5%;
+    vertical-align: text-top;
+}
+
+form input {
+    padding: 5px;
+    background: rgb(255,255,255);
+    height: 8%;
+    width: 80%;
+    margin: 3% 10%;
+    border: 2px solid rgb(219, 220, 223);
+}
+
+input:hover {
+    border-color: rgb(0,0,0);
+}
+
+input:focus {
+    outline: 0;
+    border-color: rgb(0,0,0);
+}
+
+form textarea {
+    padding: 5px;
+    height: 25%;
+    background: rgb(255,255,255);
+    height: 8%;
+    width: 80%;
+    margin: 3% 10%;
+    border: 2px solid rgb(219, 220, 223);
+}
+
+textarea:hover {
+    border-color: rgb(0,0,0);
+}
+
+textarea:focus {
+    outline: 0;
+    border-color: rgb(0,0,0);
+}
+
+iframe {
+    width: 100%;
+}
+
+form input[type="button"] {
+    border-color: rgb(0,0,0);
+    color: rgb(0,0,0);
+    font-weight: bold;
+    background: transparent;
+    width: 40%;
+    margin: 0 30%;
+}
+
+    form input[type="button"]:hover {
+        color: rgb(255,255,255);
+        background: rgb(128,128,128);
+        border-color: transparent;
+        cursor: pointer;
+    }
+
+@media (max-width:810px) {
+    .principal .derecha {
+        width: 100%;
+    }
+
+    .principal .izquierda {
+        width: 100%;
+    }
+
+    .principal .derecha {
+        padding: 1% 5%;
+    }
+}

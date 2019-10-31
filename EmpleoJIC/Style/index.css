@@ -1,0 +1,141 @@
+﻿.paginas .pagination:nth-child(1) {
+    display: block;
+}
+
+.paginas .pagination {
+    display: none;
+}
+
+.card__action-bar button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    width: 28%;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    background: rgba(240, 240, 240, 0.7);
+}
+
+.card__title {
+    text-align: center;
+    color: rgb(0,0,0);
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+.card__subtitle {
+    text-align: center;
+    font-size: 18px;
+}
+
+    .card__subtitle p {
+        text-decoration: none;
+        color: rgb(129,129,129);
+    }
+
+        .card__subtitle p:hover {
+            text-decoration: underline;
+        }
+
+.card__text {
+    height: 40%;
+    overflow: hidden;
+    padding: 5%;
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.card__action-bar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #E0E0E0;
+    height: 52px;
+}
+
+.card__button {
+    display: block;
+    line-height: 52px;
+    padding: 0 16px;
+    font-weight: bold;
+}
+
+    .card__button:hover {
+        color: rgb(255,255,255);
+        background: rgb(128,128,128);
+    }
+
+.mas-info {
+    float: left;
+}
+
+.Postulate {
+    float: right;
+}
+
+.card--big {
+    display: block;
+    height: 404px;
+    margin-left: 4%;
+    margin-top: 3%;
+    float: left;
+}
+
+.perfil {
+    padding: 2px 20px;
+}
+
+.paginacion {
+    display: flex;
+    float: left;
+    margin: 20px 5%;
+    width: 90%;
+    justify-content: center;
+}
+
+    .paginacion ul {
+        list-style: none;
+        text-align: center;
+    }
+
+        .paginacion ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+            .paginacion ul li span {
+                display: block;
+                padding: 10px 20px;
+                color: #fff;
+                background: rgba(128,128,128,0.5);
+                text-decoration: none;
+            }
+
+                .paginacion ul li span:hover {
+                    background: rgb(128,128,128);
+                }
+
+            .paginacion ul li .active {
+                background: rgb(128,128,128);
+                font-weight: bold;
+            }
+
+
+@media screen and (max-width: 870px) {
+    .card--big {
+        width: 42%;
+        margin-left: 4%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .card--big {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+}

@@ -1,0 +1,32 @@
+﻿.principal .derecha {
+    width: 50%;
+    display: block;
+    float: left;
+    padding: 1% 5%;
+}
+
+    .principal .derecha img {
+        width: 100%;
+    }
+
+.principal .izquierda {
+    width: 50%;
+    display: block;
+    float: right;
+    text-align: justify;
+    padding: 1% 5%;
+}
+
+    .principal .izquierda h2 {
+        text-align: center;
+    }
+
+@media (max-width:810px) {
+    .principal .derecha {
+        width: 100%;
+    }
+
+    .principal .izquierda {
+        width: 100%;
+    }
+}

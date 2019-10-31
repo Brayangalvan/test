@@ -1,0 +1,78 @@
+﻿@model IEnumerable<EmpleoJIC.Models.PraticalOffers>
+@{
+    ViewBag.Title = "EmpleJIC";
+    Layout = "~/Views/Shared/master.cshtml";
+    int i = 0;
+    int modulo = 1;
+}
+<link rel="stylesheet" href="../../Style/index.css" />
+
+<h1>Ofertas De Prácticas</h1>
+<div class="paginas">
+    @foreach (var practical in Model)
+    {
+
+        if (i % 9 == 0)
+        {
+            @:<div class="pagination @modulo">
+                modulo++;
+            }
+
+            <div class="card card--big">
+                <h2 class="card__title">
+                    @Html.DisplayFor(item => practical.Title)
+                </h2>
+                <a class="card__subtitle" href="">
+                    <p>@Html.DisplayFor(item => practical.Company.Name)</p>
+                </a>
+                <p class="card__text">
+                    @Html.DisplayFor(item => practical.Description)
+                </p>
+                <div class="perfil">
+                    <h3>Perfil Requerido</h3>
+                    <ul class="card__text">
+                        <li>@Html.DisplayFor(item => practical.Profile.Name)</li>
+                    </ul>
+                </div>
+                <div class="card__action-bar">
+                    <button class="card__button mas-info">Más información</button>
+                    <button class="card__button Postulate">Postulate</button>
+                </div>
+            </div>
+            i++;
+            if (i % 9 == 0 || Model.Count() == i)
+            {
+                @:</div>
+        }
+    }
+</div>
+    <div class="paginacion">
+        <ul>
+            @if (modulo > 1)
+            {
+
+                <li>
+                    <span onclick="anterior()">&lsaquo;</span>
+                </li>
+                for (int j = 1; j < modulo; j++)
+                {
+                    if (j == 1)
+                    {
+                    <li>
+                        <span id="@j" onclick="activar(@j)" class="active item">@j</span>
+                    </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <span id="@j" onclick="activar(@j)" class="item">@j</span>
+                        </li>
+                    }
+                }
+
+                <li>
+                    <span onclick="proxima()">&rsaquo;</span>
+                </li>
+            }
+        </ul>
+    </div>

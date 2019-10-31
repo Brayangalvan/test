@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../Style/styles.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <section id="containerLogin">
+        <form action="" method="GET">
+            <h2>Inicio De Sesión</h2>
+            <label for="contrasena">Identificación</label>
+            <input type="text" name="contrasena" id="contrasena">
+            <label for="Email">Contraseña</label>
+            <input type="text" name="contrasena" id="contrasena">
+            <div class="botones">
+                <input type="button" value="Entrar">
+                <input type="button" onclick="iniciosesion('cerrar')" value="Cancelar">
+            </div>
+        </form>
+    </section>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>
+                    @Html.ActionLink("BOLSA DE EMPLEO PJIC", "Index", "Home")
+                </h1>
+            </div>
+            <div id="icon">
+                <span></span>
+                <span class="derecha"></span>
+                <span class="izquierda"></span>
+                <span></span>
+            </div>
+            <div id="menuresponsive" class="invisible">
+                <div id="buscador">
+                    <i class="fa fa-search"></i>
+                    <input class="search" type="search" name="search_ofertas" id="search_Ofertas">
+                </div>
+                <ul id="menu">
+                    <li>
+                        @Html.ActionLink("Inicio", "Index", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Nosotros", "About", "Home")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Nosotros", "ContactUs", "Home")
+                    </li>
+                    <li>
+                        <a onclick="iniciosesion('entrar')">Inicio de Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="../../Js/script.js"></script>
+</body>
+</html>
